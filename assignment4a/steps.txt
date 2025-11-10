@@ -1,0 +1,27 @@
+1 Create a folder 
+mkdir static-website 
+cd static-website
+
+2 Initialize Node.js project 
+
+npm init -y
+ 
+This will create a package.json file automatically.
+ 
+3 Install Express
+ 
+npm install express
+ 
+4 Create folder for static files 
+
+mkdir public 
+Inside public folder, create an index.html file: 
+
+5 Create main server file 
+Create server.js in the root directory: 
+
+
+6 Start the server 
+node server.js 
+Now open your browser → http://localhost:3000 
+You will see your static website served by Node.js

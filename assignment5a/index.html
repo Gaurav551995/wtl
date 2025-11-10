@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple jQuery Mobile Site</title>
+
+  <!-- jQuery Mobile CDN -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+  <!-- HOME PAGE -->
+  <div data-role="page" id="home">
+    <div data-role="header">
+      <h1>My Mobile Site</h1>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" class="ui-btn-active" data-icon="home">Home</a></li>
+          <li><a href="#list" data-icon="bullets">List</a></li>
+          <li><a href="#contact" data-icon="mail">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div role="main" class="ui-content">
+      <h2>Welcome!</h2>
+      <p>This is a simple jQuery Mobile example.</p>
+      <a href="#list" class="ui-btn ui-corner-all ui-shadow" data-icon="arrow-r" data-iconpos="right">Go to List</a>
+    </div>
+
+    <div data-role="footer">
+      <h4>Home</h4>
+    </div>
+  </div>
+
+  <!-- LIST PAGE -->
+  <div data-role="page" id="list">
+    <div data-role="header">
+      <h1>Items</h1>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" data-icon="home">Home</a></li>
+          <li><a href="#list" class="ui-btn-active" data-icon="bullets">List</a></li>
+          <li><a href="#contact" data-icon="mail">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div role="main" class="ui-content">
+      <ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">Fruits</li>
+        <li><a href="#">Apple</a></li>
+        <li><a href="#">Banana</a></li>
+        <li><a href="#">Mango</a></li>
+        <li><a href="#">Orange</a></li>
+      </ul>
+      <a href="#home" class="ui-btn ui-corner-all" data-icon="arrow-l">Back to Home</a>
+    </div>
+
+    <div data-role="footer">
+      <h4>List</h4>
+    </div>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div data-role="page" id="contact">
+    <div data-role="header">
+      <h1>Contact</h1>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" data-icon="home">Home</a></li>
+          <li><a href="#list" data-icon="bullets">List</a></li>
+          <li><a href="#contact" class="ui-btn-active" data-icon="mail">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div role="main" class="ui-content">
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit" class="ui-btn ui-corner-all ui-shadow" data-icon="check">Send</button>
+      </form>
+    </div>
+
+    <div data-role="footer">
+      <h4>Contact</h4>
+    </div>
+  </div>
+
+  <script>
+    // Handle form submission
+    $(document).on('submit', '#contact-form', function (e) {
+      e.preventDefault();
+      let name = $('#name').val().trim();
+      if (name) {
+        alert('Thank you, ' + name + '! Your message has been received.');
+        this.reset();
+      } else {
+        alert('Please fill all fields.');
+      }
+    });
+  </script>
+
+</body>
+</html>

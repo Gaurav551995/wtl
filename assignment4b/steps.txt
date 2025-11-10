@@ -1,0 +1,29 @@
+1 Create project folder 
+mkdir crud-api 
+cd crud-api 
+
+2 Initialize Node project 
+npm init -y
+
+3 Install dependencies 
+npm install express mongoose cors
+ 
+Folder Structure 
+crud-api 
+├─ server.js 
+├─ models 
+│  └─ itemModel.js 
+
+
+crud-api 
+ ├─ server.js 
+ ├─ models/ 
+ ├─ public/ 
+ │   ├─ index.html 
+ │   ├─ script.js
+
+
+4 Run Server 
+node server.js
+
+5 run the index.html file
