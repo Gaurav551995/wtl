@@ -1,0 +1,22 @@
+<!-- Practcal 3-A Github File Upload -->
+
+comadns
+	
+	
+	git config --global user.name "mvrPes"
+	
+	git config --global user.email "raundal_manas_aiml@moderncoe.edu.in"
+	
+	1.	git init 
+	2.	git add .
+	3.	git commit -m "anydata"
+	4.	git remote add origin https://www.github.com/mvrPes/Wt-Practical.git
+	5.	git branch -M main 
+	6.	git push -u origin main  
+			ORR--- 
+		git pull origin main --rebase
+		
+		and then 
+			git push -u origin main 
+	7.	Goto github com
+		

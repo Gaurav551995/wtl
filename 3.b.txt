@@ -1,0 +1,20 @@
+<!-- Practcal 3-B Docker -->
+
+Practical 3-B= Docker 
+1	docker version
+2	 mkdir hello-docker
+3	 cd hello-docker
+4	 code .
+5	 vs code open folder docker-hello and create file app.js and Dockerfile:
+		App.js:-
+			console.log("Hello docker");
+		Dockerfile-
+			FROM node:alpine
+			COPY . /app
+			WORKDIR /app
+			CMD node app.js
+6 in CMD Command:
+	docker build -t hello-docker .
+
+7 CMD Command:
+	docker image ls
